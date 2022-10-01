@@ -1,6 +1,5 @@
 // DEPENDENCIES
 const recipes = require('express').Router()
-const { BackendKeyDataMessage } = require('pg-protocol/dist/messages')
 const db = require('../models')
 const { Recipes } = db
 const { Op } = require('sequelize')
