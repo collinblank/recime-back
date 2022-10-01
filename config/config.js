@@ -15,6 +15,7 @@ module.exports =
         "rejectUnauthorized":false
       }
     }
+  },
   "test": {
     "username": "bzgzflsmafpggh",
     "password": "a6e93d53aa13734ab6d75490d100c81ae18463524abdeb11b1e5ce891aa3dc22",
