@@ -1,10 +1,11 @@
 // DEPENDENCIES
 const express = require('express')
 const app = express()
-const { Sequelize } = require('sequelize')
+const cors = require('cors')
 
 // CONFIGURATION / MIDDLEWARE
-require('dotenv').config()
+require('dotenv').config();
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 

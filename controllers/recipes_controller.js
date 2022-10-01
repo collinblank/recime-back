@@ -2,17 +2,18 @@
 const recipes = require('express').Router()
 const { BackendKeyDataMessage } = require('pg-protocol/dist/messages')
 const db = require('../models')
-const { Recipes } = db 
+const { Recipes } = db
+const { Op } = require('sequelize')
 
 // FIND ALL RECIPES
 recipes.get('/', async (req, res) => {
     try {
         const foundRecipes = await Recipes.findAll(
-        //     {
-        //     where: {
-        //         name: {[Op.like ]: `%${req.query.name ?? ""}%`}
-        //     }
-        // }
+            {
+            where: {
+                name: {[Op.like ]: `%${req.query.name ?? ""}%`}
+            }
+        }
         )
         res.status(200).json(foundRecipes)
     } catch (error) {
