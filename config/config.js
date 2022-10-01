@@ -8,13 +8,7 @@ module.exports =
     "database": "d7ckka69flggqj",
     "host": "ec2-52-207-90-231.compute-1.amazonaws.com",
     "dialect": "postgres",
-    "protocol": "postgres",
-    "dialectOptions":{   
-      "ssl":{
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "protocol": "postgres"
   },
   "test": {
     "username": "bzgzflsmafpggh",
