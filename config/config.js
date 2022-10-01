@@ -3,6 +3,7 @@ require('dotenv').config()
 module.exports = 
 {
   "development": {
+    "url": "postgres://bzgzflsmafpggh:a6e93d53aa13734ab6d75490d100c81ae18463524abdeb11b1e5ce891aa3dc22@ec2-52-207-90-231.compute-1.amazonaws.com:5432/d7ckka69flggqj",
     "username": "bzgzflsmafpggh",
     "password": "a6e93d53aa13734ab6d75490d100c81ae18463524abdeb11b1e5ce891aa3dc22",
     "database": "d7ckka69flggqj",
