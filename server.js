@@ -1,7 +1,7 @@
 // DEPENDENCIES
 require('dotenv').config();
 const express = require('express')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
 // const cookieSession = require('cookie-session')
@@ -12,7 +12,7 @@ app.use(cors())
 app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 // app.use(defineCurrentUser)
 
 // app.use(cookieSession({
