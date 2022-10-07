@@ -5,18 +5,15 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 // const cookieSession = require('cookie-session')
-// const defineCurrentUser = require('./middleware/defineCurrentUser')
+const defineCurrentUser = require('./middleware/defineCurrentUser')
 
 // CONFIGURATION / MIDDLEWARE
-app.use(cors({
-    origin: 'https://recime-backend.herokuapp.com',
-    credentials: true
-}))
+app.use(cors())
 app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 // app.use(bodyParser.json())
-// app.use(defineCurrentUser)
+app.use(defineCurrentUser)
 
 // app.use(cookieSession({
 //     name: 'session',
