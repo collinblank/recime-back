@@ -13,7 +13,6 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-app.options('*', cors())
 // app.use(defineCurrentUser)
 
 // app.use(cookieSession({
@@ -23,6 +22,8 @@ app.options('*', cors())
 //     maxAge: 24 * 60 * 60 * 1000
 // }))
 
+app.use(express.urlencoded({ extended: true }))
+
 // ROOT
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -31,12 +32,12 @@ app.get('/', (req, res) => {
 })
 
 // CONTROLLERS 
-const recipesController = require('./controllers/recipes_controller')
-app.use('/recipes', recipesController)
-const usersController = require('./controllers/users')
-app.use('/users', usersController)
-const authenticationController = require('./controllers/authentication')
-app.use('/authentication', authenticationController)
+ 
+app.use('/recipes', require('./controllers/recipes_controller'))
+ 
+app.use('/users', require('./controllers/users'))
+
+app.use('/authentication', require('./controllers/authentication'))
 
 // LISTEN
 app.listen(process.env.PORT, () => {
