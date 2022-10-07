@@ -31,6 +31,10 @@ app.get('/', (req, res) => {
 // CONTROLLERS 
 const recipesController = require('./controllers/recipes_controller')
 app.use('/recipes', recipesController)
+const usersController = require('./controllers/users')
+app.use('/users', usersController)
+const authenticationController = require('./controllers/authentication')
+app.use('/authentication', authenticationController)
 
 // LISTEN
 app.listen(process.env.PORT, () => {
