@@ -7,10 +7,11 @@ module.exports = (sequelize, DataTypes) => {
 
   };
   User.init({
-    userId: {
+    user_id: {
       type: DataTypes.SMALLINT,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull: false
 
     },
     firstName: DataTypes.STRING,
@@ -19,8 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     password_digest: DataTypes.STRING
   }, {
     sequelize,
-    underscored: true,
     modelName: 'User',
+    tableName: 'users',
+    timestamps: false
   });
   return User;
 };

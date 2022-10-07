@@ -4,22 +4,23 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
-const cookieSession = require('cookie-session')
+// const cookieSession = require('cookie-session')
 // const defineCurrentUser = require('./middleware/defineCurrentUser')
 
 // CONFIGURATION / MIDDLEWARE
 app.use(cors())
 app.use(express.static('public'))
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 // app.use(defineCurrentUser)
 
-app.use(cookieSession({
-    name: 'session',
-    keys: [ process.env.SESSION_SECRET ],
-    sameSite: 'strict',
-    maxAge: 24 * 60 * 60 * 1000
-}))
+// app.use(cookieSession({
+//     name: 'session',
+//     keys: [ process.env.SESSION_SECRET ],
+//     sameSite: 'strict',
+//     maxAge: 24 * 60 * 60 * 1000
+// }))
 
 // ROOT
 app.get('/', (req, res) => {
