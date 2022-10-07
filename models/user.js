@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
   };
   User.init({
-    user_id: {
+    userId: {
       type: DataTypes.SMALLINT,
       primaryKey: true,
       autoIncrement: true,
@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
   }, 
   {
     sequelize,
-    modelName: 'User',
-    tableName: 'users',
+    underscored: true,
+    modelName: 'User'
   });
   return User;
 };

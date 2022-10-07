@@ -1,3 +1,4 @@
+
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -8,10 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
+      first_name: {
         type: Sequelize.STRING
       },
-      lastName: {
+      last_name: {
         type: Sequelize.STRING
       },
       email: {
