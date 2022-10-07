@@ -8,7 +8,10 @@ const app = express()
 // const defineCurrentUser = require('./middleware/defineCurrentUser')
 
 // CONFIGURATION / MIDDLEWARE
-app.use(cors())
+app.use(cors({
+    origin: 'https://recime-backend.herokuapp.com',
+    credentials: true
+}))
 app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
