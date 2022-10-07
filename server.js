@@ -8,10 +8,7 @@ const defineCurrentUser = require('./middleware/defineCurrentUser')
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config();
-app.use(cors({
-    origin: 'https://recime-backend.herokuapp.com/',
-    credentials: true
-}))
+app.use(cors())
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: false }))
