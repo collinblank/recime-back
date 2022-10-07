@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT
     },
     cookTime: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
     },
     instructions: {
         type: DataTypes.TEXT

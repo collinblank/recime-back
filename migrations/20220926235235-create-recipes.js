@@ -19,7 +19,7 @@ module.exports = {
       },
       cookTime: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.DECIMAL
       },
       instructions: {
         allowNull: false,
