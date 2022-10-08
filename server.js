@@ -40,6 +40,6 @@ app.use('/users', require('./controllers/users'))
 app.use('/authentication', require('./controllers/authentication'))
 
 // LISTEN
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || '8080', () => {
     console.log(`I'm here on port: ${process.env.PORT}`)
 })
